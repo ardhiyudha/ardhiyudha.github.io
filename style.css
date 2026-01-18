@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  padding: 20px;
+}
+
+input, button {
+  width: 100%;
+  padding: 12px;
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+button {
+  background: black;
+  color: white;
+  border: none;
+}
+
+#menu, #productList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
