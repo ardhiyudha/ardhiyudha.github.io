@@ -2,19 +2,18 @@ let total = 0;
 
 // LOGIN
 function login() {
-  fetch("http://localhost:3000/login", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      username: user.value,
-      password: pass.value
-    })
-  })
-  .then(res => res.json())
-  .then(data => {
-    if (!data.success) return alert("Login gagal");
-    location.href = data.role === "owner" ? "owner.html" : "kasir.html";
-  });
+  const u = document.getElementById("username").value;
+  const p = document.getElementById("password").value;
+
+  if (u === "owner" && p === "123") {
+    localStorage.setItem("role", "owner");
+    window.location.href = "owner.html";
+  } else if (u === "kasir" && p === "123") {
+    localStorage.setItem("role", "kasir");
+    window.location.href = "kasir.html";
+  } else {
+    alert("Username atau password salah");
+  }
 }
 
 // OWNER
@@ -55,3 +54,4 @@ function pay() {
   alert("Transaksi berhasil");
   total = 0;
 }
+
