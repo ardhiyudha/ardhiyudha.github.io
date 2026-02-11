@@ -113,25 +113,22 @@
       font-size: 0.85rem;
       color: var(--muted);
     }
-     /* ========= CTA ========= */
-    .cta {
-      text-align: left;
-    }
+  
+    .cta-button {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 14px 32px;
+  background: var(--accent);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+}
 
-    .cta a {
-      display: inline-block;
-      margin-top: 28px;
-      padding: 14px 32px;
-      background: var(--accent);
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 500;
-    }
+.cta-button:hover {
+  opacity: 0.9;
+}
 
-    .cta a:hover {
-      opacity: 0.9;
-    }
   </style>
 </head>
 
@@ -219,17 +216,27 @@
 </section>
 
 <!-- CTA -->
-<div class="content cta">
-      <h2>Diskusi Kebutuhan Perusahaan Anda</h2>
+<section style="background: var(--section); border-top: 1px solid var(--border);">
+  <div class="container">
+    <div class="content">
+      <h2>Diskusi Kebutuhan & Estimasi Biaya</h2>
       <p>
-        Jika Anda ingin operasional yang lebih rapi
-        dan data yang siap dipakai setiap saat,
-        kita bisa mulai dari diskusi singkat.
+        Setiap perusahaan memiliki alur kerja yang berbeda.
+        Untuk itu, estimasi biaya dan solusi terbaik
+        ditentukan melalui diskusi terlebih dahulu.
       </p>
-      <a href="https://fastwork.id/user/ardhi.yudha.id?source=web_marketplace_profile-menu_profile" target="_blank">
-  Diskusi via Fastwork
-</a>
-</div>
+      <p>
+        Diskusi dan pembayaran dilakukan melalui
+        platform <strong>Fastwork</strong>
+        untuk menjaga transparansi dan keamanan kerja sama.
+      </p>
+
+      <a class="cta-button" href="https://fastwork.id/username-kamu" target="_blank">
+        Diskusi via Fastwork
+      </a>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="container">
