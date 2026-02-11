@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ardhi Yudha — Internal Business App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ardhi Yudha | Internal Business Application</title>
 
   <style>
     :root {
-      --bg: #0f0f10;
-      --surface: #161618;
-      --text: #f5f5f7;
-      --muted: #a1a1aa;
-      --border: #2a2a2e;
+      --bg: #ffffff;
+      --surface: #f6f7f9;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --accent: #111827;
     }
 
     * {
@@ -19,7 +20,7 @@
       padding: 0;
       box-sizing: border-box;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Inter, Helvetica, Arial, sans-serif;
+                   Roboto, Inter, Helvetica, Arial, sans-serif;
     }
 
     body {
@@ -35,17 +36,17 @@
     }
 
     section {
-      padding: 120px 0;
+      padding: 96px 0;
     }
 
     h1, h2, h3 {
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: -0.02em;
     }
 
     h2 {
-      font-size: 2rem;
-      margin-bottom: 32px;
+      font-size: 1.9rem;
+      margin-bottom: 28px;
     }
 
     p {
@@ -53,35 +54,45 @@
       max-width: 760px;
     }
 
-    /* NAV */
+    /* NAVBAR */
     nav {
       position: sticky;
       top: 0;
-      background: rgba(15,15,16,.85);
-      backdrop-filter: blur(10px);
+      background: #ffffff;
       border-bottom: 1px solid var(--border);
+      z-index: 100;
     }
 
     .nav-inner {
       height: 72px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-role {
+      font-size: 0.9rem;
+      color: var(--muted);
     }
 
     /* HERO */
     .hero {
-      padding: 160px 0 140px;
+      padding: 120px 0 100px;
     }
 
     .hero h1 {
-      font-size: clamp(2.6rem, 5vw, 4rem);
+      font-size: clamp(2.4rem, 4.5vw, 3.5rem);
       max-width: 900px;
     }
 
     .hero p {
-      margin-top: 24px;
-      font-size: 1.1rem;
+      margin-top: 22px;
+      font-size: 1.05rem;
     }
 
     /* GRID */
@@ -92,27 +103,28 @@
     }
 
     .card {
-      background: var(--surface);
+      background: #ffffff;
       border: 1px solid var(--border);
-      border-radius: 14px;
+      border-radius: 10px;
       padding: 28px;
     }
 
     .card h3 {
       margin-bottom: 12px;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
     }
 
     /* PROCESS */
     .step {
-      border-left: 3px solid #fff;
-      padding-left: 20px;
-      margin-bottom: 20px;
+      border-left: 3px solid var(--accent);
+      padding-left: 18px;
+      margin-bottom: 18px;
+      color: var(--muted);
     }
 
     /* TRUST */
     .trust {
-      background: linear-gradient(180deg, var(--surface), #0c0c0d);
+      background: var(--surface);
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
@@ -125,40 +137,29 @@
     .cta a {
       display: inline-block;
       margin-top: 32px;
-      padding: 14px 28px;
-      border-radius: 999px;
-      border: 1px solid #fff;
-      color: #fff;
+      padding: 14px 32px;
+      border-radius: 6px;
+      background: var(--accent);
+      color: #ffffff;
       text-decoration: none;
+      font-weight: 500;
     }
 
     .cta a:hover {
-      background: #fff;
-      color: #000;
+      opacity: 0.9;
     }
 
     footer {
-      padding: 60px 0;
+      padding: 48px 0;
       text-align: center;
-      font-size: .85rem;
+      font-size: 0.85rem;
       color: var(--muted);
       border-top: 1px solid var(--border);
     }
 
-    .fade {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: .8s ease;
-    }
-
-    .fade.show {
-      opacity: 1;
-      transform: none;
-    }
-
     @media (max-width: 600px) {
       section {
-        padding: 80px 0;
+        padding: 72px 0;
       }
     }
   </style>
@@ -168,111 +169,100 @@
 
 <nav>
   <div class="container nav-inner">
-    <strong>ARDHI YUDHA</strong>
-    <span style="color:#aaa">Internal Business App</span>
+    <div class="brand">ARDHI YUDHA</div>
+    <div class="nav-role">Internal Business Application</div>
   </div>
 </nav>
 
-<header class="hero container fade">
+<header class="hero container">
   <h1>
     Aplikasi Internal untuk Perusahaan<br>
-    yang Ingin Operasionalnya Rapi
+    yang Ingin Operasional Lebih Rapi
   </h1>
   <p>
     Saya membantu perusahaan mengumpulkan data dari lapangan
-    lewat aplikasi Android, lalu mengolahnya otomatis di kantor
-    tanpa ribet dan tanpa sistem mahal.
+    melalui aplikasi Android, lalu mengolahnya otomatis di kantor
+    agar operasional lebih tertib dan keputusan lebih cepat.
   </p>
 </header>
 
-<section class="container fade">
-  <h2>Masalah yang Sering Terjadi di Perusahaan</h2>
+<section class="container">
+  <h2>Masalah yang Sering Terjadi</h2>
   <div class="grid">
     <div class="card">
-      <h3>Data Lapangan Berantakan</h3>
-      <p>Laporan telat, format beda-beda, dan sulit direkap.</p>
+      <h3>Data Lapangan Tidak Seragam</h3>
+      <p>Laporan masuk dengan format berbeda dan sulit direkap.</p>
     </div>
     <div class="card">
-      <h3>Terlalu Banyak Input Manual</h3>
-      <p>Admin capek, human error tinggi, dan buang waktu.</p>
+      <h3>Terlalu Banyak Proses Manual</h3>
+      <p>Input ulang memakan waktu dan rawan kesalahan.</p>
     </div>
     <div class="card">
-      <h3>Owner Sulit Ambil Keputusan</h3>
-      <p>Karena data tidak real-time dan tidak rapi.</p>
+      <h3>Manajemen Kurang Data Real-time</h3>
+      <p>Keputusan bisnis sering terlambat karena data tidak siap.</p>
     </div>
   </div>
 </section>
 
-<section class="container fade">
+<section class="container">
   <h2>Solusi yang Saya Tawarkan</h2>
   <p>
-    Saya membangun aplikasi internal berbasis Android
-    yang digunakan oleh tim lapangan untuk input data,
-    lalu data tersebut otomatis masuk ke Google Sheets
-    milik perusahaan dan siap dipakai untuk laporan,
-    evaluasi, dan keputusan bisnis.
+    Saya membangun aplikasi internal yang digunakan tim lapangan
+    untuk input data langsung dari lokasi kerja.
+    Data tersebut otomatis tersimpan di sistem kantor
+    dan siap digunakan untuk laporan, evaluasi, dan kontrol operasional.
   </p>
 </section>
 
-<section class="container fade">
-  <h2>Jenis Aplikasi yang Bisa Dibuat</h2>
+<section class="container">
+  <h2>Jenis Aplikasi</h2>
   <div class="grid">
     <div class="card"><h3>Presensi & Absensi Karyawan</h3></div>
     <div class="card"><h3>Input Data Lapangan</h3></div>
     <div class="card"><h3>Monitoring Operasional</h3></div>
-    <div class="card"><h3>Checklist Harian & Audit</h3></div>
+    <div class="card"><h3>Checklist & Audit Internal</h3></div>
     <div class="card"><h3>Database Karyawan & Aset</h3></div>
-    <div class="card"><h3>Rekap & Laporan Otomatis</h3></div>
+    <div class="card"><h3>Laporan & Rekap Otomatis</h3></div>
   </div>
 </section>
 
-<section class="container fade">
-  <h2>Bagaimana Cara Kerjanya</h2>
-  <div class="step">1. Saya pahami alur kerja bisnis Anda</div>
-  <div class="step">2. Data disusun sesuai kebutuhan perusahaan</div>
-  <div class="step">3. Tim lapangan pakai aplikasi di Android</div>
-  <div class="step">4. Data otomatis masuk ke kantor</div>
-  <div class="step">5. Perusahaan bisa langsung pakai datanya</div>
+<section class="container">
+  <h2>Alur Kerja</h2>
+  <div class="step">Memahami proses kerja dan kebutuhan perusahaan</div>
+  <div class="step">Menyusun alur dan struktur data yang rapi</div>
+  <div class="step">Tim lapangan menggunakan aplikasi Android</div>
+  <div class="step">Data otomatis masuk ke sistem kantor</div>
+  <div class="step">Perusahaan langsung menggunakan data tersebut</div>
 </section>
 
-<section class="trust fade">
+<section class="trust">
   <div class="container">
     <h2>Keamanan & Kepemilikan Data</h2>
     <p>
       Aplikasi dibuat khusus untuk internal perusahaan.
-      Data dan sistem sepenuhnya milik perusahaan,
-      bukan milik saya.
+      Data dan sistem sepenuhnya menjadi milik perusahaan.
     </p>
     <p>
-      Aplikasi terhubung ke akun Google perusahaan,
-      sehingga tidak bisa dijual, dipindahkan,
-      atau digunakan oleh pihak lain.
+      Sistem terhubung ke akun perusahaan,
+      sehingga tidak dapat dijual atau digunakan kembali
+      oleh pihak lain.
     </p>
   </div>
 </section>
 
-<section class="cta container fade">
-  <h2>Ingin Operasional Lebih Rapi?</h2>
+<section class="cta container">
+  <h2>Diskusi Kebutuhan Perusahaan Anda</h2>
   <p>
-    Jika Anda ingin tim lapangan lebih tertib
-    dan data perusahaan siap dipakai kapan saja,
-    kita bisa mulai dari diskusi sederhana.
+    Jika Anda ingin operasional yang lebih rapi
+    dan data yang siap dipakai setiap saat,
+    kita bisa mulai dari diskusi singkat.
   </p>
-  <a href="mailto:ardhi@example.com">Diskusi Sekarang</a>
+  <a href="mailto:ardhi@example.com">Hubungi Saya</a>
 </section>
 
 <footer>
-  © 2026 Ardhi Yudha — Internal Business App Builder
+  © 2026 Ardhi Yudha — Internal Business Application
 </footer>
-
-<script>
-  const els = document.querySelectorAll('.fade');
-  const obs = new IntersectionObserver(e =>
-    e.forEach(x => x.isIntersecting && x.target.classList.add('show')),
-    { threshold: 0.15 }
-  );
-  els.forEach(el => obs.observe(el));
-</script>
 
 </body>
 </html>
