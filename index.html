@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ardhi Yudha — Internal App Consultant</title>
+  <title>Ardhi Yudha — Internal Business App</title>
 
   <style>
     :root {
@@ -11,7 +11,6 @@
       --surface: #161618;
       --text: #f5f5f7;
       --muted: #a1a1aa;
-      --accent: #ffffff;
       --border: #2a2a2e;
     }
 
@@ -27,15 +26,8 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    /* ===== LAYOUT ===== */
     .container {
       max-width: 1100px;
       margin: auto;
@@ -58,32 +50,26 @@
 
     p {
       color: var(--muted);
-      max-width: 720px;
+      max-width: 760px;
     }
 
-    /* ===== NAV ===== */
+    /* NAV */
     nav {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(15,15,16,0.8);
-      backdrop-filter: blur(12px);
+      background: rgba(15,15,16,.85);
+      backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
     }
 
     .nav-inner {
       height: 72px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
 
-    .logo {
-      font-weight: 600;
-      letter-spacing: 0.04em;
-    }
-
-    /* ===== HERO ===== */
+    /* HERO */
     .hero {
       padding: 160px 0 140px;
     }
@@ -98,7 +84,7 @@
       font-size: 1.1rem;
     }
 
-    /* ===== CARDS ===== */
+    /* GRID */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -110,12 +96,6 @@
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 28px;
-      transition: transform .3s ease, border .3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: var(--accent);
     }
 
     .card h3 {
@@ -123,37 +103,21 @@
       font-size: 1.1rem;
     }
 
-    /* ===== PROCESS ===== */
+    /* PROCESS */
     .step {
-      border-left: 3px solid var(--accent);
+      border-left: 3px solid #fff;
       padding-left: 20px;
       margin-bottom: 20px;
     }
 
-    /* ===== TAG ===== */
-    .tag {
-      display: inline-block;
-      margin-top: 16px;
-      margin-right: 8px;
-      padding: 6px 14px;
-      font-size: .75rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      color: var(--muted);
-    }
-
-    /* ===== TRUST ===== */
+    /* TRUST */
     .trust {
-      background: linear-gradient(
-        180deg,
-        var(--surface),
-        #0c0c0d
-      );
+      background: linear-gradient(180deg, var(--surface), #0c0c0d);
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
 
-    /* ===== CTA ===== */
+    /* CTA */
     .cta {
       text-align: center;
     }
@@ -163,16 +127,16 @@
       margin-top: 32px;
       padding: 14px 28px;
       border-radius: 999px;
-      border: 1px solid var(--accent);
-      transition: background .3s ease, color .3s ease;
+      border: 1px solid #fff;
+      color: #fff;
+      text-decoration: none;
     }
 
     .cta a:hover {
-      background: var(--accent);
+      background: #fff;
       color: #000;
     }
 
-    /* ===== FOOTER ===== */
     footer {
       padding: 60px 0;
       text-align: center;
@@ -181,16 +145,15 @@
       border-top: 1px solid var(--border);
     }
 
-    /* ===== ANIMATION ===== */
     .fade {
       opacity: 0;
       transform: translateY(20px);
-      transition: all .8s ease;
+      transition: .8s ease;
     }
 
     .fade.show {
       opacity: 1;
-      transform: translateY(0);
+      transform: none;
     }
 
     @media (max-width: 600px) {
@@ -205,112 +168,110 @@
 
 <nav>
   <div class="container nav-inner">
-    <div class="logo">ARDHI YUDHA</div>
-    <div class="muted">Internal App Consultant</div>
+    <strong>ARDHI YUDHA</strong>
+    <span style="color:#aaa">Internal Business App</span>
   </div>
 </nav>
 
 <header class="hero container fade">
   <h1>
-    Internal Business Applications<br>
-    Built for Data Integrity & Trust
+    Aplikasi Internal untuk Perusahaan<br>
+    yang Ingin Operasionalnya Rapi
   </h1>
   <p>
-    Saya merancang aplikasi internal berbasis AppSheet
-    untuk pengumpulan data lapangan yang terintegrasi
-    langsung dengan Google Sheets.
+    Saya membantu perusahaan mengumpulkan data dari lapangan
+    lewat aplikasi Android, lalu mengolahnya otomatis di kantor
+    tanpa ribet dan tanpa sistem mahal.
   </p>
 </header>
 
 <section class="container fade">
-  <h2>Tentang Saya</h2>
+  <h2>Masalah yang Sering Terjadi di Perusahaan</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Data Lapangan Berantakan</h3>
+      <p>Laporan telat, format beda-beda, dan sulit direkap.</p>
+    </div>
+    <div class="card">
+      <h3>Terlalu Banyak Input Manual</h3>
+      <p>Admin capek, human error tinggi, dan buang waktu.</p>
+    </div>
+    <div class="card">
+      <h3>Owner Sulit Ambil Keputusan</h3>
+      <p>Karena data tidak real-time dan tidak rapi.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container fade">
+  <h2>Solusi yang Saya Tawarkan</h2>
   <p>
-    Fokus saya adalah membangun sistem internal perusahaan
-    yang stabil, terkontrol, dan mudah digunakan oleh tim lapangan.
-    Setiap aplikasi dirancang agar data mengalir rapi
-    dari lapangan ke kantor tanpa proses manual.
+    Saya membangun aplikasi internal berbasis Android
+    yang digunakan oleh tim lapangan untuk input data,
+    lalu data tersebut otomatis masuk ke Google Sheets
+    milik perusahaan dan siap dipakai untuk laporan,
+    evaluasi, dan keputusan bisnis.
   </p>
 </section>
 
 <section class="container fade">
-  <h2>Layanan</h2>
+  <h2>Jenis Aplikasi yang Bisa Dibuat</h2>
   <div class="grid">
-    <div class="card"><h3>Presensi & Attendance</h3></div>
-    <div class="card"><h3>Field Data Collection</h3></div>
-    <div class="card"><h3>Operational Monitoring</h3></div>
-    <div class="card"><h3>Checklist & Audit Internal</h3></div>
-    <div class="card"><h3>Employee & Asset Database</h3></div>
-    <div class="card"><h3>AppSheet–Sheets Integration</h3></div>
+    <div class="card"><h3>Presensi & Absensi Karyawan</h3></div>
+    <div class="card"><h3>Input Data Lapangan</h3></div>
+    <div class="card"><h3>Monitoring Operasional</h3></div>
+    <div class="card"><h3>Checklist Harian & Audit</h3></div>
+    <div class="card"><h3>Database Karyawan & Aset</h3></div>
+    <div class="card"><h3>Rekap & Laporan Otomatis</h3></div>
   </div>
 </section>
 
 <section class="container fade">
-  <h2>Metodologi Kerja</h2>
-  <div class="step">Analisis kebutuhan & alur bisnis</div>
-  <div class="step">Desain struktur data Google Sheets</div>
-  <div class="step">Pengembangan aplikasi AppSheet</div>
-  <div class="step">Integrasi & validasi data real-time</div>
-  <div class="step">Handover & dokumentasi sistem</div>
-</section>
-
-<section class="container fade">
-  <h2>Contoh Implementasi</h2>
-
-  <div class="card">
-    <h3>Field Data Collection System</h3>
-    <p>
-      Aplikasi Android internal untuk tim lapangan
-      dengan kontrol akses, timestamp, dan audit log.
-      Data tersimpan di Google Sheets milik perusahaan.
-    </p>
-    <span class="tag">AppSheet</span>
-    <span class="tag">Google Sheets</span>
-    <span class="tag">Internal Only</span>
-  </div>
+  <h2>Bagaimana Cara Kerjanya</h2>
+  <div class="step">1. Saya pahami alur kerja bisnis Anda</div>
+  <div class="step">2. Data disusun sesuai kebutuhan perusahaan</div>
+  <div class="step">3. Tim lapangan pakai aplikasi di Android</div>
+  <div class="step">4. Data otomatis masuk ke kantor</div>
+  <div class="step">5. Perusahaan bisa langsung pakai datanya</div>
 </section>
 
 <section class="trust fade">
   <div class="container">
-    <h2>Keamanan & Kepemilikan</h2>
+    <h2>Keamanan & Kepemilikan Data</h2>
     <p>
-      Setiap aplikasi dibuat secara eksklusif.
-      Ownership aplikasi dan database sepenuhnya
-      berada di tangan perusahaan.
+      Aplikasi dibuat khusus untuk internal perusahaan.
+      Data dan sistem sepenuhnya milik perusahaan,
+      bukan milik saya.
     </p>
     <p>
-      Sistem terikat pada akun Google klien,
-      sehingga tidak dapat diperjualbelikan,
-      dikloning, atau digunakan ulang
-      untuk pihak lain.
+      Aplikasi terhubung ke akun Google perusahaan,
+      sehingga tidak bisa dijual, dipindahkan,
+      atau digunakan oleh pihak lain.
     </p>
   </div>
 </section>
 
 <section class="cta container fade">
-  <h2>Diskusi Kebutuhan Perusahaan Anda</h2>
+  <h2>Ingin Operasional Lebih Rapi?</h2>
   <p>
-    Jika Anda membutuhkan aplikasi internal
-    yang aman dan berorientasi data,
-    mari kita diskusikan solusinya.
+    Jika Anda ingin tim lapangan lebih tertib
+    dan data perusahaan siap dipakai kapan saja,
+    kita bisa mulai dari diskusi sederhana.
   </p>
-  <a href="mailto:ardhi@example.com">Hubungi Saya</a>
+  <a href="mailto:ardhi@example.com">Diskusi Sekarang</a>
 </section>
 
 <footer>
-  © 2026 Ardhi Yudha — Internal App Consultant
+  © 2026 Ardhi Yudha — Internal Business App Builder
 </footer>
 
 <script>
-  const fades = document.querySelectorAll('.fade');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  }, { threshold: 0.15 });
-
-  fades.forEach(el => observer.observe(el));
+  const els = document.querySelectorAll('.fade');
+  const obs = new IntersectionObserver(e =>
+    e.forEach(x => x.isIntersecting && x.target.classList.add('show')),
+    { threshold: 0.15 }
+  );
+  els.forEach(el => obs.observe(el));
 </script>
 
 </body>
