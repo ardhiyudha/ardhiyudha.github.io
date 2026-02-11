@@ -198,47 +198,52 @@
     /* ===== MOBILE ===== */
     @media (max-width: 768px) {
 
-      section {
-        padding: 64px 0;
-      }
+  section {
+    padding: 64px 0;
+  }
 
-      h1 {
-        font-size: 2rem;
-      }
+  h1 {
+    font-size: 2rem;
+  }
 
-      h2 {
-        font-size: 1.4rem;
-      }
+  h2 {
+    font-size: 1.4rem;
+  }
 
-      p {
-        font-size: 0.95rem;
-      }
+  p {
+    font-size: 0.95rem;
+  }
 
-      /* NAV */
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-        padding: 16px 0;
-      }
+  /* NAV MOBILE */
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 8px; /* 🔥 ini kuncinya */
+  }
 
-      .nav-links {
-        gap: 16px;
-      }
+  .brand {
+    margin-left: 4px;
+  }
 
-      /* GRID */
-      .grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
+  .nav-links {
+    gap: 16px;
+    margin-left: 4px;
+  }
 
-      /* CTA */
-      .cta a {
-        width: 100%;
-        text-align: center;
-        padding: 14px 0;
-      }
-    }
+  /* GRID */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* CTA */
+  .cta a {
+    width: 100%;
+    text-align: center;
+    padding: 14px 0;
+  }
+}
   </style>
 </head>
 
@@ -338,3 +343,4 @@
 
 </body>
 </html>
+
