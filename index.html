@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ardhi Yudha | Internal Business Application</title>
 
   <style>
@@ -20,7 +20,7 @@
       padding: 0;
       box-sizing: border-box;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Roboto, Inter, Helvetica, Arial, sans-serif;
+        Roboto, Inter, Helvetica, Arial, sans-serif;
     }
 
     body {
@@ -29,11 +29,11 @@
       line-height: 1.7;
     }
 
-    /* ========= LAYOUT ========= */
+    /* ===== LAYOUT ===== */
     .container {
       max-width: 1080px;
       margin: 0 auto;
-      padding: 0 32px;
+      padding: 0 24px;
     }
 
     .content {
@@ -41,7 +41,7 @@
     }
 
     section {
-      padding: 96px 0;
+      padding: 80px 0;
     }
 
     section.soft {
@@ -50,31 +50,32 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* ========= TYPO ========= */
+    /* ===== TYPO ===== */
     h1, h2, h3 {
       font-weight: 600;
       letter-spacing: -0.02em;
     }
 
     h1 {
-      font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+      font-size: clamp(2rem, 4vw, 3.2rem);
     }
 
     h2 {
-      font-size: 1.9rem;
-      margin-bottom: 24px;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
     }
 
     h3 {
       font-size: 1.05rem;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     p {
       color: var(--muted);
+      margin-bottom: 16px;
     }
 
-    /* ========= NAV ========= */
+    /* ===== NAVIGATION ===== */
     nav {
       position: sticky;
       top: 0;
@@ -83,77 +84,53 @@
       z-index: 100;
     }
 
-    /* ===== NAVIGATION ===== */
-nav {
-  position: sticky;
-  top: 0;
-  background: #ffffff;
-  border-bottom: 1px solid var(--border);
-  z-index: 100;
-}
-
-.nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 72px;
-  padding: 0;
-}
-
-/* BRAND */
-.brand {
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  font-size: 0.95rem;
-}
-
-/* MENU */
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  font-size: 0.9rem;
-  color: var(--muted);
-  position: relative;
-}
-
-/* subtle underline */
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0;
-  height: 1.5px;
-  background: var(--text);
-  transition: width 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: var(--text);
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+    }
 
     .brand {
       font-weight: 700;
       letter-spacing: 0.04em;
+      font-size: 0.9rem;
     }
 
-    .role {
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
       font-size: 0.9rem;
       color: var(--muted);
+      position: relative;
     }
 
-    /* ========= HERO ========= */
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 1.5px;
+      background: var(--text);
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* ===== HERO ===== */
     .hero {
-      padding: 120px 0 104px;
+      padding: 96px 0 88px;
     }
 
     .hero p {
@@ -162,7 +139,7 @@ nav {
       font-size: 1.05rem;
     }
 
-    /* ========= GRID ========= */
+    /* ===== GRID ===== */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -181,27 +158,23 @@ nav {
       font-size: 0.95rem;
     }
 
-    /* ========= PROCESS ========= */
+    /* ===== PROCESS ===== */
     .steps {
       margin-top: 32px;
     }
 
     .step {
-      padding-left: 18px;
-      margin-bottom: 18px;
+      padding-left: 16px;
+      margin-bottom: 16px;
       border-left: 3px solid var(--accent);
       color: var(--muted);
       font-size: 0.95rem;
     }
 
-    /* ========= CTA ========= */
-    .cta {
-      text-align: left;
-    }
-
+    /* ===== CTA ===== */
     .cta a {
       display: inline-block;
-      margin-top: 28px;
+      margin-top: 24px;
       padding: 14px 32px;
       background: var(--accent);
       color: #ffffff;
@@ -214,112 +187,58 @@ nav {
       opacity: 0.9;
     }
 
-    /* ========= FOOTER ========= */
+    /* ===== FOOTER ===== */
     footer {
-      padding: 48px 0;
+      padding: 40px 0;
       border-top: 1px solid var(--border);
       font-size: 0.85rem;
       color: var(--muted);
     }
 
-    @media (max-width: 600px) {
-      section {
-        padding: 72px 0;
-      }
-    }
-    .nav-links a {
-  margin-left: 24px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-.nav-links a:hover {
-  color: var(--text);
-}
-    /* ===== MOBILE FRIENDLY ===== */
-@media (max-width: 768px) {
-
-  .container {
-    padding: 0 20px;
-  }
-
-  section {
-    padding: 64px 0;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  p {
-    font-size: 0.95rem;
-  }
-
-  /* NAVBAR */
-  .nav-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
-    padding: 16px 0;
-    gap: 8px;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 16px;
-  }
-
-  .nav-links a {
-    margin-left: 0;
-    font-size: 0.85rem;
-  }
-
-  /* GRID */
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  /* HERO TEXT */
-  .hero p {
-    font-size: 0.95rem;
-  }
-
-  /* CTA */
-  .cta-button {
-    width: 100%;
-    text-align: center;
-    padding: 14px 0;
-  }
-}
+    /* ===== MOBILE ===== */
     @media (max-width: 768px) {
 
-  nav {
-    position: static;
-  }
+      section {
+        padding: 64px 0;
+      }
 
-  .nav-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 16px 0;
-  }
+      h1 {
+        font-size: 2rem;
+      }
 
-  .nav-links {
-    gap: 16px;
-  }
+      h2 {
+        font-size: 1.4rem;
+      }
 
-  .nav-links a {
-    font-size: 0.85rem;
-  }
-}
+      p {
+        font-size: 0.95rem;
+      }
 
+      /* NAV */
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 16px 0;
+      }
 
+      .nav-links {
+        gap: 16px;
+      }
+
+      /* GRID */
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      /* CTA */
+      .cta a {
+        width: 100%;
+        text-align: center;
+        padding: 14px 0;
+      }
+    }
   </style>
 </head>
 
@@ -328,12 +247,12 @@ nav {
 <!-- NAV -->
 <nav>
   <div class="container nav-inner">
-  <div class="brand">ARDHI YUDHA</div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="price-benefit.html">Price & Benefit</a>
+    <div class="brand">ARDHI YUDHA</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="price-benefit.html">Price & Benefit</a>
+    </div>
   </div>
-</div>
 </nav>
 
 <!-- HERO -->
@@ -357,24 +276,24 @@ nav {
     <div class="content">
       <h2>Masalah yang Sering Terjadi</h2>
       <p>
-        Banyak perusahaan mengalami kendala bukan karena kurang data,
-        tetapi karena data tidak rapi, tidak seragam,
-        dan sulit digunakan untuk mengambil keputusan.
+        Banyak perusahaan memiliki data,
+        namun kesulitan memanfaatkannya
+        karena proses yang tidak rapi dan manual.
       </p>
     </div>
 
     <div class="grid">
       <div class="card">
-        <h3>Data Lapangan Tidak Seragam</h3>
-        <p>Laporan masuk dengan format berbeda dan sulit direkap.</p>
+        <h3>Data Tidak Seragam</h3>
+        <p>Laporan berbeda format dan sulit direkap.</p>
       </div>
       <div class="card">
-        <h3>Proses Manual Terlalu Banyak</h3>
+        <h3>Proses Manual</h3>
         <p>Input ulang memakan waktu dan rawan kesalahan.</p>
       </div>
       <div class="card">
-        <h3>Keputusan Tidak Berbasis Data</h3>
-        <p>Karena data tidak tersedia secara real-time.</p>
+        <h3>Keputusan Lambat</h3>
+        <p>Data tidak tersedia secara real-time.</p>
       </div>
     </div>
   </div>
@@ -384,82 +303,12 @@ nav {
 <section class="soft">
   <div class="container">
     <div class="content">
-      <h2>Solusi yang Saya Tawarkan</h2>
+      <h2>Solusi</h2>
       <p>
-        Saya membangun aplikasi internal yang digunakan tim lapangan
-        untuk menginput data langsung dari lokasi kerja.
-        Data tersebut otomatis masuk ke sistem kantor
-        dan siap digunakan untuk laporan, evaluasi,
-        dan kontrol operasional.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section>
-  <div class="container">
-    <div class="content">
-      <h2>Jenis Aplikasi</h2>
-    </div>
-
-    <div class="grid">
-      <div class="card"><h3>Presensi & Absensi Karyawan</h3></div>
-      <div class="card"><h3>Key Performance Index (KPI)</h3></div>
-      <div class="card"><h3>Inventori & Stok Barang</h3></div>
-      <div class="card"><h3>Checklist Harian</h3></div>
-      <div class="card"><h3>Database Costumer</h3></div>
-      <div class="card"><h3>Dan masih banyak lagi</h3></div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="soft">
-  <div class="container">
-    <div class="content">
-      <h2>Alur Kerja</h2>
-    </div>
-
-    <div class="steps">
-      <div class="step">1. Saya pahami alur kerja bisnis Anda</div>
-      <div class="step">2. Data disusun sesuai kebutuhan perusahaan</div>
-      <div class="step">3. Tim lapangan pakai aplikasi di Android</div>
-      <div class="step">4. Data otomatis masuk ke Google Sheet</div>
-      <div class="step">5. Perusahaan langsung menggunakan data tersebut</div>
-    </div>
-  </div>
-</section>
-
-<!-- TRUST -->
-<section>
-  <div class="container">
-    <div class="content">
-      <h2>Keamanan & Kepemilikan Data</h2>
-      <p>
-        Aplikasi dibuat khusus untuk internal perusahaan.
-        Seluruh data dan sistem sepenuhnya menjadi milik perusahaan,
-        terhubung langsung ke akun perusahaan,
-        dan tidak digunakan untuk pihak lain.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- PLATFORM -->
-<section class="soft">
-  <div class="container">
-    <div class="content">
-      <h2>Platform Diskusi & Pembayaran</h2>
-      <p>
-        Untuk menjaga profesionalitas dan keamanan kerja sama,
-        saya menggunakan platform <strong>Fastwork</strong>
-        sebagai media diskusi dan pembayaran.
-      </p>
-      <p>
-        Dengan Fastwork, perusahaan mendapatkan transparansi proses,
-        kejelasan ruang lingkup pekerjaan,
-        serta sistem pembayaran yang aman dan terpercaya.
+        Aplikasi internal berbasis AppSheet
+        yang digunakan tim lapangan,
+        terintegrasi langsung dengan Google Sheet
+        untuk laporan dan evaluasi.
       </p>
     </div>
   </div>
@@ -471,13 +320,12 @@ nav {
     <div class="content cta">
       <h2>Diskusi Kebutuhan Perusahaan Anda</h2>
       <p>
-        Jika Anda ingin operasional yang lebih rapi
-        dan data yang siap dipakai setiap saat,
-        kita bisa mulai dari diskusi singkat.
+        Diskusi dan pembayaran dilakukan melalui
+        platform Fastwork untuk keamanan dan transparansi.
       </p>
-      <a href="https://fastwork.id/user/ardhi.yudha.id?source=web_marketplace_profile-menu_profile" target="_blank">
-  Diskusi via Fastwork
-</a>
+      <a href="https://fastwork.id/user/ardhi.yudha.id" target="_blank">
+        Diskusi via Fastwork
+      </a>
     </div>
   </div>
 </section>
@@ -490,12 +338,3 @@ nav {
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
