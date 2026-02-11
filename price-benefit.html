@@ -20,7 +20,7 @@
       padding: 0;
       box-sizing: border-box;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Roboto, Inter, Helvetica, Arial, sans-serif;
+        Roboto, Inter, Helvetica, Arial, sans-serif;
     }
 
     body {
@@ -49,13 +49,18 @@
     }
 
     h1 {
-      font-size: clamp(2.2rem, 4vw, 3rem);
-      margin-bottom: 24px;
+      font-size: clamp(2.3rem, 4vw, 3rem);
+      margin-bottom: 20px;
     }
 
     h2 {
       font-size: 1.6rem;
-      margin-bottom: 20px;
+      margin: 48px 0 16px;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      margin-bottom: 8px;
     }
 
     p {
@@ -68,6 +73,7 @@
       top: 0;
       background: #ffffff;
       border-bottom: 1px solid var(--border);
+      z-index: 10;
     }
 
     .nav-inner {
@@ -107,28 +113,32 @@
       background: #ffffff;
     }
 
+    .cta-section {
+      background: var(--section);
+      border-top: 1px solid var(--border);
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 14px 32px;
+      background: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .cta-button:hover {
+      opacity: 0.9;
+    }
+
     footer {
       padding: 48px 0;
       border-top: 1px solid var(--border);
       font-size: 0.85rem;
       color: var(--muted);
     }
-  
-    .cta-button {
-  display: inline-block;
-  margin-top: 28px;
-  padding: 14px 32px;
-  background: var(--accent);
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 500;
-}
-
-.cta-button:hover {
-  opacity: 0.9;
-}
-
   </style>
 </head>
 
@@ -145,12 +155,14 @@
   </div>
 </nav>
 
-<!-- CONTENT -->
+<!-- MAIN -->
 <section>
   <div class="container">
     <div class="content">
-      <h1>Price</h1>
+      <h1>Price & Benefit</h1>
 
+      <!-- PRICE -->
+      <h2>Price</h2>
       <p>
         Harga pengembangan aplikasi dimulai dari
         <strong>Rp1.500.000</strong>,
@@ -165,9 +177,9 @@
         Namun, tersedia opsi <strong>prototype gratis</strong>
         untuk tahap awal pengujian sistem.
       </p>
-      
-      <h1>Benefit</h1>
-      
+
+      <!-- BENEFIT -->
+      <h2>Benefit</h2>
       <p>
         Dari sisi Return on Investment (ROI),
         aplikasi internal membantu perusahaan
@@ -190,7 +202,7 @@
         <p>
           Biaya disepakati di awal,
           sehingga perusahaan memiliki kontrol penuh
-          terhadap pengeluaran tanpa kejutan di tengah jalan.
+          terhadap pengeluaran tanpa kejutan.
         </p>
       </div>
 
@@ -216,13 +228,13 @@
 </section>
 
 <!-- CTA -->
-<section style="background: var(--section); border-top: 1px solid var(--border);">
+<section class="cta-section">
   <div class="container">
     <div class="content">
       <h2>Diskusi Kebutuhan & Estimasi Biaya</h2>
       <p>
         Setiap perusahaan memiliki alur kerja yang berbeda.
-        Untuk itu, estimasi biaya dan solusi terbaik
+        Estimasi biaya dan solusi terbaik
         ditentukan melalui diskusi terlebih dahulu.
       </p>
       <p>
@@ -231,7 +243,9 @@
         untuk menjaga transparansi dan keamanan kerja sama.
       </p>
 
-      <a class="cta-button" href="https://fastwork.id/user/ardhi.yudha.id" target="_blank">
+      <a class="cta-button"
+         href="https://fastwork.id/user/ardhi.yudha.id"
+         target="_blank">
         Diskusi via Fastwork
       </a>
     </div>
