@@ -8,7 +8,7 @@
   <style>
     :root {
       --bg: #ffffff;
-      --surface: #f6f7f9;
+      --section: #f7f8fa;
       --text: #1f2937;
       --muted: #6b7280;
       --border: #e5e7eb;
@@ -29,32 +29,52 @@
       line-height: 1.7;
     }
 
+    /* ========= LAYOUT ========= */
     .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 0 24px;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .content {
+      max-width: 760px;
     }
 
     section {
       padding: 96px 0;
     }
 
+    section.soft {
+      background: var(--section);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ========= TYPO ========= */
     h1, h2, h3 {
       font-weight: 600;
       letter-spacing: -0.02em;
     }
 
+    h1 {
+      font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+    }
+
     h2 {
       font-size: 1.9rem;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      margin-bottom: 10px;
     }
 
     p {
       color: var(--muted);
-      max-width: 760px;
     }
 
-    /* NAVBAR */
+    /* ========= NAV ========= */
     nav {
       position: sticky;
       top: 0;
@@ -75,31 +95,28 @@
       letter-spacing: 0.04em;
     }
 
-    .nav-role {
+    .role {
       font-size: 0.9rem;
       color: var(--muted);
     }
 
-    /* HERO */
+    /* ========= HERO ========= */
     .hero {
-      padding: 120px 0 100px;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.4rem, 4.5vw, 3.5rem);
-      max-width: 900px;
+      padding: 120px 0 104px;
     }
 
     .hero p {
-      margin-top: 22px;
+      margin-top: 20px;
+      max-width: 720px;
       font-size: 1.05rem;
     }
 
-    /* GRID */
+    /* ========= GRID ========= */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 24px;
+      margin-top: 40px;
     }
 
     .card {
@@ -109,39 +126,36 @@
       padding: 28px;
     }
 
-    .card h3 {
-      margin-bottom: 12px;
-      font-size: 1.05rem;
+    .card p {
+      font-size: 0.95rem;
     }
 
-    /* PROCESS */
+    /* ========= PROCESS ========= */
+    .steps {
+      margin-top: 32px;
+    }
+
     .step {
-      border-left: 3px solid var(--accent);
       padding-left: 18px;
       margin-bottom: 18px;
+      border-left: 3px solid var(--accent);
       color: var(--muted);
+      font-size: 0.95rem;
     }
 
-    /* TRUST */
-    .trust {
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    /* CTA */
+    /* ========= CTA ========= */
     .cta {
-      text-align: center;
+      text-align: left;
     }
 
     .cta a {
       display: inline-block;
-      margin-top: 32px;
+      margin-top: 28px;
       padding: 14px 32px;
-      border-radius: 6px;
       background: var(--accent);
       color: #ffffff;
       text-decoration: none;
+      border-radius: 6px;
       font-weight: 500;
     }
 
@@ -149,12 +163,12 @@
       opacity: 0.9;
     }
 
+    /* ========= FOOTER ========= */
     footer {
       padding: 48px 0;
-      text-align: center;
+      border-top: 1px solid var(--border);
       font-size: 0.85rem;
       color: var(--muted);
-      border-top: 1px solid var(--border);
     }
 
     @media (max-width: 600px) {
@@ -167,101 +181,143 @@
 
 <body>
 
+<!-- NAV -->
 <nav>
   <div class="container nav-inner">
     <div class="brand">ARDHI YUDHA</div>
-    <div class="nav-role">Internal Business Application</div>
+    <div class="role">Internal Business Application</div>
   </div>
 </nav>
 
-<header class="hero container">
-  <h1>
-    Aplikasi Internal untuk Perusahaan<br>
-    yang Ingin Operasional Lebih Rapi
-  </h1>
-  <p>
-    Saya membantu perusahaan mengumpulkan data dari lapangan
-    melalui aplikasi Android, lalu mengolahnya otomatis di kantor
-    agar operasional lebih tertib dan keputusan lebih cepat.
-  </p>
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <h1>
+      Aplikasi Internal untuk Perusahaan<br>
+      yang Ingin Operasional Lebih Rapi
+    </h1>
+    <p>
+      Saya membantu perusahaan mengumpulkan data dari lapangan
+      melalui aplikasi Android, lalu mengolahnya otomatis di kantor
+      agar operasional lebih tertib dan keputusan bisnis lebih cepat.
+    </p>
+  </div>
 </header>
 
-<section class="container">
-  <h2>Masalah yang Sering Terjadi</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Data Lapangan Tidak Seragam</h3>
-      <p>Laporan masuk dengan format berbeda dan sulit direkap.</p>
-    </div>
-    <div class="card">
-      <h3>Terlalu Banyak Proses Manual</h3>
-      <p>Input ulang memakan waktu dan rawan kesalahan.</p>
-    </div>
-    <div class="card">
-      <h3>Manajemen Kurang Data Real-time</h3>
-      <p>Keputusan bisnis sering terlambat karena data tidak siap.</p>
-    </div>
-  </div>
-</section>
-
-<section class="container">
-  <h2>Solusi yang Saya Tawarkan</h2>
-  <p>
-    Saya membangun aplikasi internal yang digunakan tim lapangan
-    untuk input data langsung dari lokasi kerja.
-    Data tersebut otomatis tersimpan di sistem kantor
-    dan siap digunakan untuk laporan, evaluasi, dan kontrol operasional.
-  </p>
-</section>
-
-<section class="container">
-  <h2>Jenis Aplikasi</h2>
-  <div class="grid">
-    <div class="card"><h3>Presensi & Absensi Karyawan</h3></div>
-    <div class="card"><h3>Input Data Lapangan</h3></div>
-    <div class="card"><h3>Monitoring Operasional</h3></div>
-    <div class="card"><h3>Checklist & Audit Internal</h3></div>
-    <div class="card"><h3>Database Karyawan & Aset</h3></div>
-    <div class="card"><h3>Laporan & Rekap Otomatis</h3></div>
-  </div>
-</section>
-
-<section class="container">
-  <h2>Alur Kerja</h2>
-  <div class="step">Memahami proses kerja dan kebutuhan perusahaan</div>
-  <div class="step">Menyusun alur dan struktur data yang rapi</div>
-  <div class="step">Tim lapangan menggunakan aplikasi Android</div>
-  <div class="step">Data otomatis masuk ke sistem kantor</div>
-  <div class="step">Perusahaan langsung menggunakan data tersebut</div>
-</section>
-
-<section class="trust">
+<!-- PROBLEM -->
+<section>
   <div class="container">
-    <h2>Keamanan & Kepemilikan Data</h2>
-    <p>
-      Aplikasi dibuat khusus untuk internal perusahaan.
-      Data dan sistem sepenuhnya menjadi milik perusahaan.
-    </p>
-    <p>
-      Sistem terhubung ke akun perusahaan,
-      sehingga tidak dapat dijual atau digunakan kembali
-      oleh pihak lain.
-    </p>
+    <div class="content">
+      <h2>Masalah yang Sering Terjadi</h2>
+      <p>
+        Banyak perusahaan mengalami kendala bukan karena kurang data,
+        tetapi karena data tidak rapi, tidak seragam,
+        dan sulit digunakan untuk mengambil keputusan.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Data Lapangan Tidak Seragam</h3>
+        <p>Laporan masuk dengan format berbeda dan sulit direkap.</p>
+      </div>
+      <div class="card">
+        <h3>Proses Manual Terlalu Banyak</h3>
+        <p>Input ulang memakan waktu dan rawan kesalahan.</p>
+      </div>
+      <div class="card">
+        <h3>Keputusan Tidak Berbasis Data</h3>
+        <p>Karena data tidak tersedia secara real-time.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="cta container">
-  <h2>Diskusi Kebutuhan Perusahaan Anda</h2>
-  <p>
-    Jika Anda ingin operasional yang lebih rapi
-    dan data yang siap dipakai setiap saat,
-    kita bisa mulai dari diskusi singkat.
-  </p>
-  <a href="mailto:ardhi@example.com">Hubungi Saya</a>
+<!-- SOLUTION -->
+<section class="soft">
+  <div class="container">
+    <div class="content">
+      <h2>Solusi yang Saya Tawarkan</h2>
+      <p>
+        Saya membangun aplikasi internal yang digunakan tim lapangan
+        untuk menginput data langsung dari lokasi kerja.
+        Data tersebut otomatis masuk ke sistem kantor
+        dan siap digunakan untuk laporan, evaluasi,
+        dan kontrol operasional.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section>
+  <div class="container">
+    <div class="content">
+      <h2>Jenis Aplikasi</h2>
+    </div>
+
+    <div class="grid">
+      <div class="card"><h3>Presensi & Absensi Karyawan</h3></div>
+      <div class="card"><h3>Input Data Lapangan</h3></div>
+      <div class="card"><h3>Monitoring Operasional</h3></div>
+      <div class="card"><h3>Checklist & Audit Internal</h3></div>
+      <div class="card"><h3>Database Karyawan & Aset</h3></div>
+      <div class="card"><h3>Laporan & Rekap Otomatis</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="soft">
+  <div class="container">
+    <div class="content">
+      <h2>Alur Kerja</h2>
+    </div>
+
+    <div class="steps">
+      <div class="step">Memahami proses kerja dan kebutuhan perusahaan</div>
+      <div class="step">Menyusun struktur dan alur data yang rapi</div>
+      <div class="step">Tim lapangan menggunakan aplikasi Android</div>
+      <div class="step">Data otomatis masuk ke sistem kantor</div>
+      <div class="step">Perusahaan langsung menggunakan data tersebut</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section>
+  <div class="container">
+    <div class="content">
+      <h2>Keamanan & Kepemilikan Data</h2>
+      <p>
+        Aplikasi dibuat khusus untuk internal perusahaan.
+        Seluruh data dan sistem sepenuhnya menjadi milik perusahaan,
+        terhubung langsung ke akun perusahaan,
+        dan tidak digunakan untuk pihak lain.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="soft">
+  <div class="container">
+    <div class="content cta">
+      <h2>Diskusi Kebutuhan Perusahaan Anda</h2>
+      <p>
+        Jika Anda ingin operasional yang lebih rapi
+        dan data yang siap dipakai setiap saat,
+        kita bisa mulai dari diskusi singkat.
+      </p>
+      <a href="mailto:ardhi@example.com">Hubungi Saya</a>
+    </div>
+  </div>
 </section>
 
 <footer>
-  © 2026 Ardhi Yudha — Internal Business Application
+  <div class="container">
+    © 2026 Ardhi Yudha — Internal Business Application
+  </div>
 </footer>
 
 </body>
