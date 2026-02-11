@@ -186,6 +186,67 @@
 .nav-links a:hover {
   color: var(--text);
 }
+    /* ===== MOBILE FRIENDLY ===== */
+@media (max-width: 768px) {
+
+  .container {
+    padding: 0 20px;
+  }
+
+  section {
+    padding: 64px 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  /* NAVBAR */
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 16px 0;
+    gap: 8px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 16px;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    font-size: 0.85rem;
+  }
+
+  /* GRID */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* HERO TEXT */
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  /* CTA */
+  .cta-button {
+    width: 100%;
+    text-align: center;
+    padding: 14px 0;
+  }
+}
+
   </style>
 </head>
 
@@ -356,6 +417,7 @@
 
 </body>
 </html>
+
 
 
 
