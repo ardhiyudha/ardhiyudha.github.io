@@ -1,75 +1,137 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 body {
   background: #ffffff;
-  color: #000;
+  color: #111;
   line-height: 1.7;
 }
 
+/* NAV */
+.nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 25px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* HERO */
 .hero {
-  padding: 90px 20px;
-  text-align: center;
-  border-bottom: 1px solid #000;
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-.tagline {
-  margin-top: 15px;
+.hero p {
   font-size: 1.1rem;
+  color: #444;
 }
 
+/* SECTIONS */
 section {
   max-width: 900px;
-  margin: auto;
-  padding: 60px 20px;
+  margin: 100px auto;
+  padding: 0 20px;
 }
 
 h2 {
-  margin-bottom: 20px;
+  font-size: 1.6rem;
+  margin-bottom: 25px;
 }
 
-ul, ol {
-  padding-left: 20px;
+/* SERVICES */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
 }
 
-li {
-  margin-bottom: 10px;
-}
-
-.highlight {
-  background: #f7f7f7;
-}
-
-.project .card {
-  border: 1px solid #000;
+.box {
   padding: 20px;
-  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
 }
 
-.trust {
+/* PROCESS */
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.step {
+  padding: 15px 20px;
+  border-left: 3px solid #000;
   background: #fafafa;
-  border-left: 4px solid #000;
 }
 
-.cta {
+/* PROJECTS */
+.card {
+  border: 1px solid #ddd;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.tag {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 8px;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border: 1px solid #000;
+  border-radius: 20px;
+}
+
+/* TRUST */
+.trust {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  border-radius: 8px;
+}
+
+/* CONTACT */
+.contact {
   text-align: center;
 }
 
-.contact {
+.contact-info {
   margin-top: 15px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 30px;
-  border-top: 1px solid #000;
+  padding: 40px 20px;
+  border-top: 1px solid #eee;
+  margin-top: 80px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
 }
