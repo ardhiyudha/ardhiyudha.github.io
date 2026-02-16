@@ -1,19 +1,12 @@
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href"))
-      .scrollIntoView({ behavior: "smooth" });
-  });
+// Contoh sederhana: Navbar akan berubah bayangannya saat di-scroll
+window.addEventListener('scroll', function() {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) {
+        nav.classList.add('shadow');
+    } else {
+        nav.classList.remove('shadow');
+    }
 });
 
-// Navbar shadow on scroll
-const navbar = document.querySelector(".navbar");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 20) {
-    navbar.style.boxShadow = "0 4px 12px rgba(0,0,0,0.05)";
-  } else {
-    navbar.style.boxShadow = "none";
-  }
-});
+// Kamu bisa menambahkan tracking atau animasi sederhana di sini nantinya
+console.log("Portofolio Ardhi Yudha siap digunakan!");
