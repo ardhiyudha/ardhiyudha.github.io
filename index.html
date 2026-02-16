@@ -1,245 +1,124 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ardhi Yudha | Internal Business Application</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <!-- ================= NAVIGATION ================= -->
-<nav>
-  <div class="container nav-inner">
-    <div class="brand">ARDHI YUDHA</div>
+<nav class="navbar">
+  <div class="container nav-wrapper">
+    <div class="logo">ARDHI YUDHA</div>
     <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="price-benefit.html">Price & Benefit</a>
-      <a href="partnership.html">Partnership</a>
+      <a href="#about">About</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#process">Process</a>
+      <a href="#contact" class="btn-nav">Contact</a>
     </div>
   </div>
 </nav>
-  
-<!-- ===== HERO ===== -->
+
+<!-- ================= HERO ================= -->
 <header class="hero">
-  <div class="container">
+  <div class="container hero-content">
     <h1>
-      Aplikasi Internal Perusahaan<br />
-      berbasis AppSheet
+      Sistem Internal Perusahaan<br>
+      yang Terstruktur & Siap Scale
     </h1>
     <p>
-      Saya membantu perusahaan mengubah pencatatan manual
-      menjadi sistem digital yang rapi dan mudah digunakan,
-      sehingga data lapangan siap dipakai
-      untuk evaluasi dan pengambilan keputusan bisnis.
+      Saya membantu perusahaan membangun aplikasi internal
+      berbasis AppSheet untuk mengelola operasional,
+      mengurangi human error, dan meningkatkan efisiensi kerja.
     </p>
+    <a href="#contact" class="btn-primary">Diskusi Kebutuhan</a>
   </div>
 </header>
 
-<!-- ===== PROBLEM ===== -->
-<section>
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section">
+  <div class="container narrow">
+    <h2>Pendekatan Profesional</h2>
+    <p>
+      Banyak perusahaan mengalami kendala bukan karena kurang data,
+      tetapi karena data tidak terstruktur dan tidak siap digunakan
+      untuk pengambilan keputusan.
+    </p>
+    <p>
+      Dengan pendekatan sistematis dan berbasis workflow bisnis,
+      saya merancang aplikasi internal yang relevan dengan
+      kebutuhan operasional perusahaan.
+    </p>
+  </div>
+</section>
+
+<!-- ================= SOLUTIONS ================= -->
+<section id="solutions" class="section soft">
   <div class="container">
-    <div class="content">
-      <h2>Masalah Umum di Perusahaan</h2>
-      <p>
-        Banyak perusahaan sebenarnya sudah memiliki data,
-        namun operasional tetap terasa lambat
-        karena proses pencatatan, pelaporan,
-        dan rekap data masih dilakukan secara manual.
-      </p>
-    </div>
+    <h2>Solusi yang Dikembangkan</h2>
 
     <div class="grid">
       <div class="card">
-        <h3>Data Lapangan Tidak Terpusat</h3>
-        <p>
-          Data tersebar di WhatsApp, kertas,
-          atau file terpisah sehingga sulit dipantau
-          dan rawan hilang.
-        </p>
+        <h3>Presensi & Monitoring Tim</h3>
+        <p>Sistem absensi dan pelacakan aktivitas berbasis real-time.</p>
       </div>
 
       <div class="card">
-        <h3>Administrasi Memakan Waktu</h3>
-        <p>
-          Tim menghabiskan banyak waktu
-          untuk mencatat dan merekap,
-          bukan menganalisis data.
-        </p>
+        <h3>KPI & Evaluasi Kinerja</h3>
+        <p>Pengukuran performa terintegrasi dengan Google Sheets.</p>
       </div>
 
       <div class="card">
-        <h3>Human Error & Data Tidak Akurat</h3>
-        <p>
-          Format yang tidak seragam
-          menyebabkan kesalahan laporan
-          dan keputusan menjadi berisiko.
-        </p>
+        <h3>Inventory & Asset Control</h3>
+        <p>Kontrol stok dan pergerakan barang yang lebih akurat.</p>
       </div>
 
       <div class="card">
-        <h3>Monitoring Tidak Real-Time</h3>
-        <p>
-          Manajemen terlambat mengetahui kondisi lapangan
-          karena laporan masuk tidak langsung.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Sistem Sulit Disesuaikan</h3>
-        <p>
-          Saat alur kerja berubah,
-          sistem lama tidak fleksibel
-          dan sulit diadaptasi.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Data Tidak Siap Dipakai</h3>
-        <p>
-          Data tersedia,
-          tetapi belum siap digunakan
-          untuk evaluasi dan kontrol operasional.
-        </p>
+        <h3>Custom Workflow System</h3>
+        <p>Pengembangan aplikasi sesuai alur kerja perusahaan.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== SOLUTION ===== -->
-<section class="soft">
-  <div class="container">
-    <div class="content">
-      <h2>Solusi yang Lebih Sederhana & Efisien</h2>
-      <p>
-        Saya membangun sistem internal sederhana
-        yang digunakan tim lapangan
-        untuk mencatat aktivitas kerja secara langsung
-        melalui aplikasi Android.
-      </p>
-      <p>
-        Data otomatis tersusun rapi,
-        terhubung ke Google Sheet,
-        dan siap digunakan untuk laporan,
-        evaluasi kinerja,
-        serta kontrol operasional
-        tanpa menambah beban kerja tim.
-      </p>
+<!-- ================= PROCESS ================= -->
+<section id="process" class="section">
+  <div class="container narrow">
+    <h2>Metodologi Kerja</h2>
+
+    <div class="timeline">
+      <div class="timeline-item">Analisis kebutuhan bisnis</div>
+      <div class="timeline-item">Perancangan struktur data</div>
+      <div class="timeline-item">Pengembangan aplikasi</div>
+      <div class="timeline-item">Testing & deployment</div>
+      <div class="timeline-item">Evaluasi dan optimasi</div>
     </div>
   </div>
 </section>
 
-<!-- ===== SERVICES ===== -->
-<section>
-  <div class="container">
-    <div class="content">
-      <h2>Sistem Internal yang Umum Dibutuhkan</h2>
-      <p>
-        Digunakan perusahaan untuk menjaga disiplin,
-        kontrol biaya,
-        dan performa tim.
-      </p>
-    </div>
-
-    <div class="grid">
-      <div class="card"><h3>Presensi & Absensi Karyawan</h3></div>
-      <div class="card"><h3>Key Performance Indicator (KPI)</h3></div>
-      <div class="card"><h3>Inventori & Stok Barang</h3></div>
-      <div class="card"><h3>Checklist Operasional Harian</h3></div>
-      <div class="card"><h3>Database Customer</h3></div>
-      <div class="card"><h3>Sistem Internal Custom</h3></div>
-    </div>
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section soft">
+  <div class="container narrow center">
+    <h2>Siap Meningkatkan Efisiensi Operasional?</h2>
+    <p>
+      Mari diskusikan kebutuhan sistem internal perusahaan Anda.
+      Semua proses dilakukan secara profesional melalui Fastwork.
+    </p>
+    <a href="https://fastwork.id/user/ardhi.yudha.id" target="_blank" class="btn-primary">
+      Hubungi via Fastwork
+    </a>
   </div>
 </section>
 
-<!-- ===== PROCESS ===== -->
-<section class="soft">
-  <div class="container">
-    <div class="content">
-      <h2>Alur Kerja</h2>
-    </div>
-    <div class="steps">
-      <div class="step">1. Anda jelaskan alur aplikasinya</div>
-      <div class="step">2. Saya menyusun struktur data sesuai kebutuhan</div>
-      <div class="step">3. Tim lapangan menggunakan aplikasi Android</div>
-      <div class="step">4. Data otomatis masuk ke Google Sheet</div>
-      <div class="step">5. Data digunakan untuk evaluasi & keputusan</div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== SECURITY ===== -->
-<section>
-  <div class="container">
-    <div class="content">
-      <h2>Keamanan & Kepemilikan Data</h2>
-      <p>
-        Aplikasi dibuat khusus untuk internal perusahaan.
-        Seluruh data dan sistem sepenuhnya
-        menjadi milik perusahaan
-        dan terhubung langsung ke akun perusahaan.
-      </p>
-      <p>
-        Data tidak digunakan untuk pihak lain
-        dan tidak diperjualbelikan.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PLATFORM ===== -->
-<section class="soft">
-  <div class="container">
-    <div class="content">
-      <h2>Platform Diskusi & Pembayaran</h2>
-      <p>
-        Untuk menjaga profesionalitas dan keamanan kerja sama,
-        diskusi dan pembayaran dilakukan melalui
-        platform <strong>Fastwork</strong>.
-      </p>
-      <p>
-        Fastwork memberikan transparansi proses,
-        kejelasan ruang lingkup pekerjaan,
-        serta sistem pembayaran yang aman dan terpercaya.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CTA ===== -->
-<section class="soft">
-  <div class="container">
-    <div class="content cta">
-      <h2>Diskusi Kebutuhan Perusahaan Anda</h2>
-      <p>
-        Setiap perusahaan memiliki alur kerja yang berbeda.
-        Estimasi biaya dan solusi terbaik
-        ditentukan melalui diskusi awal
-        tanpa komitmen.
-      </p>
-
-      <a
-        href="https://fastwork.id/user/ardhi.yudha.id"
-        target="_blank"
-      >
-        Diskusi via Fastwork
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
 <footer>
   <div class="container">
-    © 2026 Ardhi Yudha — Internal Business Application
+    © 2026 Ardhi Yudha — Internal Business Application Specialist
   </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
