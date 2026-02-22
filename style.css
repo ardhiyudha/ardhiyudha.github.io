@@ -1,74 +1,72 @@
 :root {
-    --primary-color: #0d6efd; /* Blue Corporate */
-    --text-dark: #212529;
-    --text-light: #6c757d;
+    --primary-blue: #0d6efd;
+    --navy-bg: #002d72;
+    --soft-bg: #f8f9fa;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    color: var(--text-dark);
-    scroll-behavior: smooth;
+    color: #333;
 }
 
 .hero-section {
-    min-height: 85vh;
-    padding: 60px 0;
+    padding: 100px 0;
+    background: linear-gradient(160deg, #fff 50%, #f0f4ff 100%);
 }
 
-.hero-image-placeholder {
+.mockup-frame {
     height: 400px;
-    background: #e9ecef;
-    border: 2px dashed #dee2e6;
-}
-
-.hover-up {
-    transition: transform 0.3s ease, shadow 0.3s ease;
-}
-
-.hover-up:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 1rem 3rem rgba(0,0,0,.1) !important;
-}
-
-.navbar-brand {
-    letter-spacing: 1px;
-}
-
-h1, h2, h3 {
-    color: #002d72; /* Darker Navy for professionalism */
-}
-
-@media (max-width: 768px) {
-    .hero-section {
-        padding: 40px 0;
-    }
-}
-
-/* Bagan Lingkaran Angka */
-.feature-icon-circle {
-    width: 50px;
-    height: 50px;
-    background-color: #0d6efd;
-    color: white;
-    border-radius: 50%;
+    background: #fff;
+    border-radius: 20px;
+    border: 8px solid #333;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+}
+
+/* Feature Cards */
+.feature-card {
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-bottom: 3px solid var(--primary-blue);
+}
+
+/* Workflow Steps */
+.workflow-container {
+    border-left: 2px dashed #dee2e6;
+    padding-left: 30px;
+    margin-left: 20px;
+}
+
+.workflow-step {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.step-num {
+    position: absolute;
+    left: -42px;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background: var(--primary-blue);
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
-    font-size: 1.2rem;
 }
 
-/* Garis pemisah antar kolom hanya di desktop (md ke atas) */
-@media (min-width: 768px) {
-    .border-end-md {
-        border-right: 1px solid #dee2e6;
-    }
-}
-
-/* Responsivitas Tombol Mobile */
+/* Mobile Responsiveness */
 @media (max-width: 576px) {
-    .hero-section .btn {
-        width: 100%; /* Tombol memenuhi layar di HP agar mudah diklik */
-    }
+    .hero-section { padding: 50px 0; }
+    .hero-section .btn { width: 100%; }
+    .display-5 { font-size: 2rem; }
 }
