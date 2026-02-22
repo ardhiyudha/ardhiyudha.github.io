@@ -4,6 +4,15 @@
     --soft-bg: #f8f9fa;
 }
 
+.nav-link i {
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+.nav-link:hover {
+    color: var(--primary-blue) !important;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     color: #333;
