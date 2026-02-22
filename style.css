@@ -72,6 +72,70 @@ body {
     justify-content: center;
     font-weight: bold;
 }
+/* Penyesuaian Warna Khusus */
+.bg-light-success { background-color: #f0fff4; }
+.bg-light-blue { background-color: #f0f7ff; }
+
+.app-icon-large {
+    width: 85px;
+    height: 85px;
+    font-size: 2.8rem;
+}
+
+.btn-playstore {
+    background-color: #01875f !important;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-playstore:hover {
+    background-color: #016d4d !important;
+    transform: scale(1.02);
+}
+
+.ss-card {
+    min-width: 220px;
+    flex-shrink: 0;
+}
+
+.ss-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Scrollbar Custom */
+.custom-scrollbar::-webkit-scrollbar { height: 6px; }
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #e0e0e0;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .app-icon-large { width: 70px; height: 70px; font-size: 2rem; }
+    h1 { font-size: 1.5rem; }
+}
+/* Di file style.css */
+img {
+    max-width: 100%; /* Agar gambar tidak melebihi lebar layar (Mobile Friendly) */
+    height: auto;
+    border-radius: 8px; /* Memberikan sudut melengkung agar modern */
+}
+.app-icon-large {
+    width: 85px;
+    height: 85px;
+    background-color: #fff; /* Memberikan latar belakang putih jika logo transparan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-icon-large img {
+    /* Menjaga logo tetap proporsional */
+    object-fit: contain; 
+    padding: 10px; /* Memberikan sedikit ruang agar logo tidak menempel ke pinggir kotak */
+}
+
 
 /* Mobile Responsiveness */
 @media (max-width: 576px) {
