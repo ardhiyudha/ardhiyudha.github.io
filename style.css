@@ -93,15 +93,50 @@ body {
     transform: scale(1.02);
 }
 
+/* Container utama untuk scroll horizontal */
+.screenshot-container {
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 0 15px;
+}
+
+/* Kartu Screenshot (Ukuran Mobile Friendly) */
 .ss-card {
-    min-width: 220px;
+    min-width: 240px; /* Menentukan lebar tetap agar ramping */
+    max-width: 240px;
     flex-shrink: 0;
+    transition: transform 0.3s ease;
 }
 
 .ss-card img {
     width: 100%;
     height: auto;
+    aspect-ratio: 9 / 19.5; /* Mengikuti rasio layar HP kekinian */
+    object-fit: cover; /* Memastikan gambar memenuhi area tanpa gepeng */
     display: block;
+}
+
+/* Efek sedikit membesar saat disentuh/hover */
+.ss-card:hover {
+    transform: scale(1.02);
+}
+
+/* Scrollbar Custom yang lebih tipis */
+.custom-scrollbar::-webkit-scrollbar {
+    height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #dbdbdb;
+    border-radius: 10px;
+}
+
+/* Penyesuaian untuk layar HP yang sangat kecil */
+@media (max-width: 576px) {
+    .ss-card {
+        min-width: 180px; /* Lebih kecil lagi di layar HP agar terlihat 2-3 gambar sekaligus */
+        max-width: 180px;
+    }
 }
 
 /* Scrollbar Custom */
