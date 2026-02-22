@@ -40,5 +40,6 @@ document.addEventListener('click', async (e) => {
     }
 });
 
+
 // Kamu bisa menambahkan tracking atau animasi sederhana di sini nantinya
 console.log("Portofolio Ardhi Yudha siap digunakan!");
