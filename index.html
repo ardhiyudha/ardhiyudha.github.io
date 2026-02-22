@@ -3,120 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ardhi Yudha | AppSheet Specialist</title>
+    <title>Ardhi Yudha | Spesialis Automasi AppSheet & Google Sheets</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="#">AY.DEV</a>
+            <a class="navbar-brand fw-bold text-primary" href="#">ARDHI YUDHA</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#solusi">Solusi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#mengapa">Mengapa Otomatisasi?</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-lg-3" href="#kontak">Konsultasi Gratis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#fitur">Fitur Unggulan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#alur">Alur Kerja</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-lg-3 px-4" href="#kontak">Konsultasi Gratis</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero-section d-flex align-items-center">
-    <div class="container">
-        <div class="row align-items-center text-center text-lg-start">
-            <div class="col-lg-7">
-                <h1 class="display-4 fw-bold mb-3">Transformasi Operasional: Digitalisasi Data Lapangan</h1>
-                <p class="lead mb-4 text-secondary">Halo, saya <strong>Ardhi Yudha</strong>. Membantu perusahaan mengonversi proses manual menjadi sistem digital yang cerdas, terintegrasi, dan scalable dengan AppSheet.</p>
-                <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3">
-                    <a href="#kontak" class="btn btn-primary btn-lg px-4">Mulai Proyek</a>
-                    <a href="#demo" class="btn btn-outline-primary btn-lg px-4">Lihat Demo</a>
+    <header class="hero-section">
+        <div class="container text-center text-lg-start">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="display-5 fw-bold mb-3">Hentikan Rekap Manual dari Grup WhatsApp.</h1>
+                    <p class="lead mb-4">Integrasikan data lapangan langsung ke <strong>Google Sheets</strong> dengan aplikasi kustom AppSheet. Data tersinkronisasi otomatis, akurat, dan real-time tanpa perantara admin.</p>
+                    <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3">
+                        <a href="#kontak" class="btn btn-primary btn-lg px-4">Konsultasi Sekarang</a>
+                        <a href="#fitur" class="btn btn-outline-primary btn-lg px-4">Lihat Fitur</a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-5 mt-5 mt-lg-0 d-none d-lg-block">
-                <div class="hero-image-placeholder shadow-lg rounded-4 d-flex align-items-center justify-content-center text-muted">
-                    [Mockup AppSheet Mobile]
+                <div class="col-lg-5 mt-5 mt-lg-0 d-none d-lg-block">
+                    <div class="mockup-frame shadow-lg">
+                        <div class="p-4 text-center text-muted">Preview Aplikasi AppSheet</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
-    <section id="solusi" class="py-5 bg-light">
-        <div class="container py-4">
-            <h2 class="text-center fw-bold mb-5">Nilai Strategis Untuk Perusahaan Anda</h2>
+    <section id="fitur" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Validasi Data Lapangan Anti-Manipulasi</h2>
+                <p class="text-secondary">Optimalisasi fitur untuk memastikan integritas data perusahaan Anda.</p>
+            </div>
             <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm p-4 hover-up">
-                        <h4 class="fw-bold">Operational Excellence</h4>
-                        <p class="text-secondary">Efisiensi waktu hingga 10x lipat melalui integrasi real-time ke Google Sheets.</p>
+                <div class="col-md-4 col-sm-6">
+                    <div class="feature-card p-4 h-100 shadow-sm bg-white">
+                        <i class="bi bi-geo-alt-fill text-primary fs-1"></i>
+                        <h5 class="fw-bold mt-3">Real-Time Geolocation</h5>
+                        <p class="small text-muted">Kunci koordinat GPS persis di mana data diambil. Pantau kehadiran tim secara akurat.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm p-4 hover-up">
-                        <h4 class="fw-bold">High Accountability</h4>
-                        <p class="text-secondary">Validasi lokasi (GPS) dan timestamp otomatis menjamin integritas laporan lapangan.</p>
+                <div class="col-md-4 col-sm-6">
+                    <div class="feature-card p-4 h-100 shadow-sm bg-white">
+                        <i class="bi bi-shield-lock-fill text-primary fs-1"></i>
+                        <h5 class="fw-bold mt-3">Autentikasi Aman</h5>
+                        <p class="small text-muted">Login via email resmi perusahaan untuk memastikan hanya pengguna terdaftar yang bisa akses.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm p-4 hover-up">
-                        <h4 class="fw-bold">Agile & Scalable</h4>
-                        <p class="text-secondary">Sistem dirancang untuk tumbuh seiring perkembangan skala bisnis Anda.</p>
+                <div class="col-md-4 col-sm-6">
+                    <div class="feature-card p-4 h-100 shadow-sm bg-white">
+                        <i class="bi bi-camera-fill text-primary fs-1"></i>
+                        <h5 class="fw-bold mt-3">Foto & Bukti Fisik</h5>
+                        <p class="small text-muted">Unggah foto selfie atau dokumentasi pekerjaan langsung dari kamera HP tim lapangan.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="feature-card p-4 h-100 shadow-sm bg-white">
+                        <i class="bi bi-stopwatch-fill text-primary fs-1"></i>
+                        <h5 class="fw-bold mt-3">Timestamp Otomatis</h5>
+                        <p class="small text-muted">Mencatat waktu input hingga detik terkecil. Menghilangkan manipulasi jam laporan.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="feature-card p-4 h-100 shadow-sm bg-white">
+                        <i class="bi bi-pencil-square text-primary fs-1"></i>
+                        <h5 class="fw-bold mt-3">Tanda Tangan Digital</h5>
+                        <p class="small text-muted">Proses tanda tangan langsung di aplikasi untuk verifikasi dokumen resmi secara digital.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="feature-card p-4 h-100 shadow-sm bg-white">
+                        <i class="bi bi-pc-display-horizontal text-primary fs-1"></i>
+                        <h5 class="fw-bold mt-3">Multi-Platform</h5>
+                        <p class="small text-muted">Akses lancar melalui Handphone (Android/iOS), Tablet, hingga PC/Desktop.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="mengapa" class="py-5">
-    <div class="container py-5">
-        <div class="row justify-content-center text-center mb-5">
-            <div class="col-lg-8">
-                <h2 class="fw-bold mb-3">Mengapa Otomatisasi Bisnis Itu Penting?</h2>
-                <p class="text-secondary">Otomatisasi bukan untuk menggantikan manusia, melainkan mengubah tim Anda dari <strong>'tukang ketik data'</strong> menjadi <strong>'analis strategis'</strong>.</p>
+    <section id="alur" class="py-5">
+        <div class="container py-5">
+            <h2 class="text-center fw-bold mb-5">Bagaimana Saya Membantu Anda?</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="workflow-container">
+                        <div class="workflow-step">
+                            <span class="step-num">1</span>
+                            <div>
+                                <h6 class="fw-bold">Konsultasi Strategis</h6>
+                                <p class="small text-muted">Bedah alur kerja, referensi fitur, dan kesepakatan harga.</p>
+                            </div>
+                        </div>
+                        <div class="workflow-step">
+                            <span class="step-num">2</span>
+                            <div>
+                                <h6 class="fw-bold">Pembayaran & Komitmen</h6>
+                                <p class="small text-muted">Administrasi awal untuk memulai fase pengembangan.</p>
+                            </div>
+                        </div>
+                        <div class="workflow-step">
+                            <span class="step-num">3</span>
+                            <div>
+                                <h6 class="fw-bold">Fase Pengembangan (3-30 Hari)</h6>
+                                <p class="small text-muted">Proses pembuatan aplikasi sesuai paket pilihan Anda.</p>
+                            </div>
+                        </div>
+                        <div class="workflow-step">
+                            <span class="step-num">4</span>
+                            <div>
+                                <h6 class="fw-bold">Uji Coba & Revisi</h6>
+                                <p class="small text-muted">Aplikasi dishare ke Anda untuk direvisi hingga benar-benar sesuai.</p>
+                            </div>
+                        </div>
+                        <div class="workflow-step">
+                            <span class="step-num">5</span>
+                            <div>
+                                <h6 class="fw-bold">Serah Terima & Edukasi</h6>
+                                <p class="small text-muted">Penyerahan aplikasi penuh beserta E-Book panduan penggunaan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <div class="row g-4 text-center">
-            <div class="col-md-4">
-                <div class="p-4 border-end-md">
-                    <div class="feature-icon-circle mb-3">01</div>
-                    <h5 class="fw-bold">Hentikan Pemborosan Bakat</h5>
-                    <p class="small text-muted">Staf terbaik Anda tidak seharusnya menghabiskan 80% waktunya hanya untuk memindahkan data manual.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-4 border-end-md">
-                    <div class="feature-icon-circle mb-3">02</div>
-                    <h5 class="fw-bold">Akurasi Tanpa Celah</h5>
-                    <p class="small text-muted">Hilangkan kesalahan rekapitulasi (human error) dan pastikan data yang masuk valid 100% sejak dari lapangan.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-4">
-                    <div class="feature-icon-circle mb-3">03</div>
-                    <h5 class="fw-bold">Keputusan Berbasis Data</h5>
-                    <p class="small text-muted">Ubah tumpukan formulir menjadi dashboard interaktif. Pimpin perusahaan berdasarkan fakta, bukan firasat.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-    <footer id="kontak" class="bg-dark text-white py-5 mt-5">
+    <section class="bg-primary text-white py-5">
+        <div class="container text-center py-4">
+            <h2 class="fw-bold mb-4">Bukan Sekadar Aplikasi, Tapi Solusi ROI 10x Lipat</h2>
+            <p class="lead mb-5 opacity-75">Dengan pengalaman 5+ tahun dan Sertifikasi Internasional Bisnis & Manajemen, saya pastikan operasional Anda naik kelas.</p>
+            <a href="#kontak" class="btn btn-light btn-lg px-5 fw-bold text-primary">Dapatkan Prototype Gratis</a>
+        </div>
+    </section>
+
+    <footer id="kontak" class="bg-dark text-white py-4">
         <div class="container text-center">
-            <h2 class="fw-bold mb-3">Siap Mengoptimalkan Bisnis Anda?</h2>
-            <p class="mb-4">Dapatkan Prototype/Demo Gratis yang disesuaikan dengan kendala operasional Anda.</p>
-            <a href="mailto:emailanda@gmail.com" class="btn btn-primary btn-lg px-5">Hubungi Ardhi Yudha</a>
-            <p class="mt-4 text-muted small">&copy; 2024 Ardhi Yudha - AppSheet Specialist. Built with GitHub Pages.</p>
+            <p class="small text-muted mb-0">&copy; 2026 Ardhi Yudha - AppSheet Specialist. Solusi Automasi Terpercaya.</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
