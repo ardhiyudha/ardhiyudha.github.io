@@ -178,3 +178,27 @@ img {
     .hero-section .btn { width: 100%; }
     .display-5 { font-size: 2rem; }
 }
+
+/* Card Sertifikat di Halaman Project */
+.card-body .bi-patch-check-fill {
+    font-size: 1.2rem;
+}
+
+.card img {
+    transition: opacity 0.3s ease;
+    cursor: zoom-in;
+}
+
+.card img:hover {
+    opacity: 0.9;
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 768px) {
+    .card-body {
+        text-align: center;
+    }
+    .card-body .d-flex {
+        justify-content: center;
+    }
+}
