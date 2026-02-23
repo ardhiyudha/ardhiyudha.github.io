@@ -202,3 +202,52 @@ img {
         justify-content: center;
     }
 }
+
+/* Container Gallery */
+.project-card {
+    min-width: 300px; /* Lebar kartu ala Google Play Store di tablet/desktop */
+    max-width: 300px;
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Banner Project */
+.project-banner img {
+    width: 100%;
+    height: 160px; /* Tinggi proporsional banner landscape */
+    object-fit: cover;
+    background-color: #f8f9fa;
+}
+
+/* Icon Project Kecil */
+.project-icon-sm {
+    width: 48px;
+    height: 48px;
+}
+
+.project-icon-sm img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Info Project */
+.project-info h6 {
+    font-size: 0.95rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Responsif Mobile */
+@media (max-width: 576px) {
+    .project-card {
+        min-width: 260px; /* Sedikit lebih kecil di HP */
+    }
+    .project-banner img {
+        height: 140px;
+    }
+}
