@@ -251,3 +251,18 @@ img {
         height: 140px;
     }
 }
+
+.mockup-frame, .feature-card {
+    transition: all 0.3s ease;
+}
+
+/* Animasi mengambang untuk hero image */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.col-lg-5.d-none.d-lg-block {
+    animation: float 6s ease-in-out infinite;
+}
