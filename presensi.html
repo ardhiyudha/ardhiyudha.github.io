@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Presensi</title>
     <style>
         body, html {
@@ -14,49 +14,50 @@
             background-color: #f3f4f6;
         }
 
-        .container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto; /* Memungkinkan scroll jika konten melebihi layar setelah di-zoom */
-            -webkit-overflow-scrolling: touch;
+        /* Container bertindak sebagai 'crop box' */
+        .zoom-container {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
         }
 
         iframe {
-            /* Kita buat iframe-nya seolah-olah berjalan di layar yang lebih kecil (misal 66%) 
-               lalu kita perbesar 1.5x (150%) agar elemen di dalamnya terlihat raksasa */
-            width: 66.6%; 
-            height: 66.6%;
+            /* Kita buat iframe jauh lebih besar dari layar (150%) */
+            width: 150%; 
+            height: 150%;
             
-            /* Zoom 1.5x */
-            transform: scale(1.5);
-            transform-origin: 0 0;
-            
-            /* Cadangan untuk browser tertentu */
-            zoom: 1.5; 
-            
-            /* Koreksi ukuran agar tetap mengisi layar penuh setelah di-scale */
-            width: 66.6vw !important;
-            height: 66.6vh !important;
+            /* Lalu kita ciutkan kembali skalanya ke ukuran normal tapi dengan konten yang padat */
+            /* ATAU kita biarkan 100% tapi kita zoom elemen di dalamnya */
             
             border: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            /* Teknik Zoom Paksa */
+            transform: scale(1.0); /* Mulai dari 1.0 */
+            transform-origin: 0 0;
         }
 
-        /* Penyesuaian khusus untuk layar HP yang sangat kecil */
+        /* Khusus Mobile: Kita paksa zoom kontennya */
         @media screen and (max-width: 480px) {
             iframe {
-                width: 66.6%; 
-                height: 66.6%;
-                transform: scale(1.5);
+                width: 80%;   /* Mengurangi canvas agar elemen di GAS terpaksa merapat */
+                height: 80%;
+                transform: scale(1.25); /* Memperbesar kembali hasil rapat tersebut */
+                
+                /* Jika masih kurang besar, gunakan kombinasi ini: */
+                /* width: 66.6%; */
+                /* height: 66.6%; */
+                /* transform: scale(1.5); */
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <div class="zoom-container">
         <iframe 
             src="https://script.google.com/macros/s/AKfycbxT_2_bsjZfbnZYe6Cew4sUO-MasOlHofzbGKkhmq9M23AjTJV0oYtYQ-i1_0QdHI0c/exec" 
             allow="geolocation; camera; microphone">
