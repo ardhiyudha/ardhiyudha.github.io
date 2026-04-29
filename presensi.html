@@ -14,7 +14,6 @@
             background-color: #f3f4f6;
         }
 
-        /* Container bertindak sebagai 'crop box' */
         .zoom-container {
             width: 100vw;
             height: 100vh;
@@ -23,34 +22,31 @@
         }
 
         iframe {
-            /* Kita buat iframe jauh lebih besar dari layar (150%) */
-            width: 120%; 
-            height: 120%;
-            
-            /* Lalu kita ciutkan kembali skalanya ke ukuran normal tapi dengan konten yang padat */
-            /* ATAU kita biarkan 100% tapi kita zoom elemen di dalamnya */
+            /* Kita gunakan rumus 100 / scale */
+            /* Jika scale 1.1, maka width & height adalah 90.9% */
+            width: 90.9%; 
+            height: 90.9%;
             
             border: none;
             position: absolute;
             top: 0;
             left: 0;
 
-            /* Teknik Zoom Paksa */
-            transform: scale(1.0); /* Mulai dari 1.0 */
+            /* Zoom level 1.1 (110%) */
+            transform: scale(1.1);
             transform-origin: 0 0;
+            
+            /* Menyesuaikan ukuran agar tetap full screen secara visual */
+            width: 90.9vw !important;
+            height: 90.9vh !important;
         }
 
-        /* Khusus Mobile: Kita paksa zoom kontennya */
+        /* Khusus Mobile */
         @media screen and (max-width: 480px) {
             iframe {
-                width: 80%;   /* Mengurangi canvas agar elemen di GAS terpaksa merapat */
-                height: 80%;
-                transform: scale(1.25); /* Memperbesar kembali hasil rapat tersebut */
-                
-                /* Jika masih kurang besar, gunakan kombinasi ini: */
-                /* width: 66.6%; */
-                /* height: 66.6%; */
-                /* transform: scale(1.5); */
+                width: 90.9%; 
+                height: 90.9%;
+                transform: scale(1.1);
             }
         }
     </style>
