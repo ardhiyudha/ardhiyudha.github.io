@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
     <title>Presensi</title>
     <style>
         body, html {
@@ -14,37 +14,49 @@
             background-color: #f3f4f6;
         }
 
-        .iframe-container {
+        .zoom-container {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
             position: relative;
-            width: 100%;
-            height: 100%;
-            overflow: hidden; /* Penting agar bagian yang ter-scale tidak 'luber' */
         }
 
         iframe {
+            /* 100 / 1.2 = 83.33 */
+            width: 83.33%; 
+            height: 83.33%;
+            
+            border: none;
             position: absolute;
             top: 0;
             left: 0;
-            /* Kita buat ukuran aslinya sedikit lebih kecil agar saat di-scale tidak pecah 
-               dan tetap memenuhi layar tanpa scrollbar horizontal berlebih */
-            width: 90.9%;  /* Rumus: 100 / scale_factor (100 / 1.1) */
-            height: 90.9%; 
+
+            /* Zoom level 1.2 (120%) */
+            transform: scale(1.2);
+            transform-origin: 0 0;
             
-            border: none;
+            /* Memastikan visual tetap memenuhi layar */
+            width: 83.33vw !important;
+            height: 83.33vh !important;
             
-            /* Trick Scale Up */
-            transform: scale(1.1); /* Perbesar 110%. Ganti ke 1.2 jika ingin lebih besar */
-            transform-origin: 0 0; /* Mulai pembesaran dari pojok kiri atas */
-            
-            /* Penyesuaian lebar akhir agar tetap full screen */
-            width: 100vw;
-            height: 100vh;
+            /* Support untuk browser lama */
+            -webkit-transform: scale(1.2);
+            -webkit-transform-origin: 0 0;
+        }
+
+        /* Optimalisasi untuk layar ponsel */
+        @media screen and (max-width: 480px) {
+            iframe {
+                width: 83.33%; 
+                height: 83.33%;
+                transform: scale(1.2);
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="iframe-container">
+    <div class="zoom-container">
         <iframe 
             src="https://script.google.com/macros/s/AKfycbxT_2_bsjZfbnZYe6Cew4sUO-MasOlHofzbGKkhmq9M23AjTJV0oYtYQ-i1_0QdHI0c/exec" 
             allow="geolocation; camera; microphone">
