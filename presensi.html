@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presensi</title>
     <style>
         body, html {
@@ -14,49 +14,41 @@
             background-color: #f3f4f6;
         }
 
-        .zoom-container {
+        .container {
             width: 100vw;
             height: 100vh;
             overflow: hidden;
-            position: relative;
         }
 
         iframe {
-            /* 100 / 1.2 = 83.33 */
-            width: 83.33%; 
-            height: 83.33%;
+            /* Trik Anti Blur: */
+            /* 1. Buat resolusi iframe 2x lipat lebih besar dari layar (200%) */
+            width: 200%;
+            height: 200%;
             
-            border: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-
-            /* Zoom level 1.2 (120%) */
-            transform: scale(1.2);
+            /* 2. Kecilkan kembali ke ukuran layar menggunakan scale(0.5) */
+            /* Ini akan memadatkan pixel sehingga tampilan sangat tajam */
+            transform: scale(0.5);
             transform-origin: 0 0;
             
-            /* Memastikan visual tetap memenuhi layar */
-            width: 83.33vw !important;
-            height: 83.33vh !important;
-            
-            /* Support untuk browser lama */
-            -webkit-transform: scale(1.2);
-            -webkit-transform-origin: 0 0;
+            border: none;
         }
 
-        /* Optimalisasi untuk layar ponsel */
+        /* Khusus Mobile: Jika ingin konten terlihat 125% lebih besar tapi tajam */
         @media screen and (max-width: 480px) {
             iframe {
-                width: 83.33%; 
-                height: 83.33%;
-                transform: scale(1.2);
+                /* Logika: Kita buat kanvas sebesar 160% agar konten merapat, 
+                   lalu kita scale 0.625 untuk ketajaman (160 * 0.625 = 100) */
+                width: 160%; 
+                height: 160%;
+                transform: scale(0.625);
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="zoom-container">
+    <div class="container">
         <iframe 
             src="https://script.google.com/macros/s/AKfycbxT_2_bsjZfbnZYe6Cew4sUO-MasOlHofzbGKkhmq9M23AjTJV0oYtYQ-i1_0QdHI0c/exec" 
             allow="geolocation; camera; microphone">
