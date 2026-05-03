@@ -2,6 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <!-- Viewport tetap standard untuk menjaga ketajaman -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Sistem Gamara Attire</title>
   <style>
@@ -11,25 +12,17 @@
       width: 100%;
       height: 100%;
       overflow: hidden;
-      background-color: #f4f6f9; /* Samakan dengan bg aplikasi agar seamless */
+      background-color: #ffffff;
     }
 
-    .iframe-wrapper {
-      /* 
-         Kompensasi Kalkulasi:
-         Jika scale adalah 0.8 (80%), maka ukuran kontainer harus 1/0.8 = 125%
-         agar saat dikecilkan tetap memenuhi 100% layar asal.
-      */
-      width: 125%; 
-      height: 125%;
-      
-      /* Proses Zoom */
-      transform: scale(0.8);
-      transform-origin: 0 0; /* Kunci di pojok kiri atas */
-      
-      position: absolute;
+    .iframe-container {
+      position: fixed;
       top: 0;
       left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      overflow: hidden;
     }
 
     iframe {
@@ -39,18 +32,33 @@
       display: block;
     }
 
-    /* Perbaikan khusus Mobile agar tidak ada sela putih di kanan/bawah */
+    /* --- LOGIKA ZOOM 80% KHUSUS MOBILE --- */
     @media (max-width: 767px) {
-      .iframe-wrapper {
-        width: 125.1%; /* Sedikit dilebihkan untuk menghindari garis sisa */
-        height: 125.1%;
+      .iframe-container {
+        /* Zoom 80% = Scale 0.8 */
+        transform: scale(0.8);
+        
+        /* Pastikan titik pusat pengecilan di pojok kiri atas */
+        transform-origin: top left;
+        
+        /* Kompensasi lebar & tinggi agar tidak ada sisa ruang kosong (whitespace)
+           Rumus: 100% / 0.8 = 125% */
+        width: 125% !important;
+        height: 125% !important;
+      }
+      
+      body {
+        /* Menghilangkan potensi scrollbar akibat scale yang meluas */
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
       }
     }
   </style>
 </head>
 <body>
 
-<div class="iframe-wrapper">
+<div class="iframe-container">
   <iframe 
     src="https://script.google.com/macros/s/AKfycbxArNPSVpxG97qQ5lyaFGfJeGRWlFV5OfWk-d60tFUk8ZYsGfACUxXpAe9qbR0fqf9uCg/exec" 
     allow="camera; microphone; geolocation"
