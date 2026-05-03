@@ -5,41 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Sistem Gamara Attire</title>
   <style>
-    /* Menghilangkan margin/padding bawaan browser yang memicu scrollbar */
     body, html {
       margin: 0;
       padding: 0;
-      width: 85%;
-      height: 85%;
-      overflow: hidden; /* Kunci scroll pada level paling luar */
-      background-color: #ffffff; /* Sesuaikan dengan warna dashboard */
-    }
-
-    .iframe-container {
-      position: fixed; /* Menggunakan fixed agar benar-benar mengunci posisi */
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
       width: 100%;
       height: 100%;
-      border: none;
-      margin: 0;
-      padding: 0;
       overflow: hidden;
+      background-color: #f4f6f9; /* Samakan dengan bg aplikasi agar seamless */
+    }
+
+    .iframe-wrapper {
+      /* 
+         Kompensasi Kalkulasi:
+         Jika scale adalah 0.8 (80%), maka ukuran kontainer harus 1/0.8 = 125%
+         agar saat dikecilkan tetap memenuhi 100% layar asal.
+      */
+      width: 125%; 
+      height: 125%;
+      
+      /* Proses Zoom */
+      transform: scale(0.8);
+      transform-origin: 0 0; /* Kunci di pojok kiri atas */
+      
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
     iframe {
       width: 100%;
       height: 100%;
       border: none;
-      display: block; /* Menghilangkan celah kecil di bawah iframe */
+      display: block;
+    }
+
+    /* Perbaikan khusus Mobile agar tidak ada sela putih di kanan/bawah */
+    @media (max-width: 767px) {
+      .iframe-wrapper {
+        width: 125.1%; /* Sedikit dilebihkan untuk menghindari garis sisa */
+        height: 125.1%;
+      }
     }
   </style>
 </head>
 <body>
 
-<div class="iframe-container">
+<div class="iframe-wrapper">
   <iframe 
     src="https://script.google.com/macros/s/AKfycbxArNPSVpxG97qQ5lyaFGfJeGRWlFV5OfWk-d60tFUk8ZYsGfACUxXpAe9qbR0fqf9uCg/exec" 
     allow="camera; microphone; geolocation"
