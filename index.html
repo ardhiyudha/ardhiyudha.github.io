@@ -1,1 +1,70 @@
-https://script.google.com/macros/s/AKfycbyyTHd-VeDjXvcQ9dS1MeR7baC9IVTIeVsynJxC2yAtGYBihbU8O5pcvkb_tbGtw2DHjA/exec
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <!-- Viewport tetap standard untuk menjaga ketajaman -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Cloud ERP</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #ffffff;
+    }
+
+    .iframe-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* --- LOGIKA ZOOM 80% KHUSUS MOBILE --- */
+    @media (max-width: 767px) {
+      .iframe-container {
+        /* Zoom 80% = Scale 0.8 */
+        transform: scale(0.8);
+        
+        /* Pastikan titik pusat pengecilan di pojok kiri atas */
+        transform-origin: top left;
+        
+        /* Kompensasi lebar & tinggi agar tidak ada sisa ruang kosong (whitespace)
+           Rumus: 100% / 0.8 = 125% */
+        width: 125% !important;
+        height: 125% !important;
+      }
+      
+      body {
+        /* Menghilangkan potensi scrollbar akibat scale yang meluas */
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="iframe-container">
+  <iframe 
+    src="https://script.google.com/macros/s/AKfycbyyTHd-VeDjXvcQ9dS1MeR7baC9IVTIeVsynJxC2yAtGYBihbU8O5pcvkb_tbGtw2DHjA/exec" 
+    allow="camera; microphone; geolocation"
+    title="Cloud ERP">
+  </iframe>
+</div>
+
+</body>
+</html>
